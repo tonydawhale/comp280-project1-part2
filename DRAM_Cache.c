@@ -36,10 +36,13 @@ int readWithCache(Address addr) {
         int value, line;
         int set = (addr >> 5) & 0x3;
         int addressTag = (addr >> 7) & 0x1ff;
+        bool hit = false;
+        bool compulsory = false;
         for (int i = 0; i < NUM_LINES; i++) {
             if (DRAMCache[set][i].valid && !DRAMCache[set][i].dirty && DRAMCache[set][i].tag == addressTag) { //for non-dirty hit
                 perfCacheHit(addr, set, value);
                 line = i;
+                hit = true;
                 break;
             } 
             else if(DRAMCache[set][i].dirty == true && DRAMCache[set][i].tag == addressTag) { //for dirty hit
@@ -47,24 +50,29 @@ int readWithCache(Address addr) {
                 perfCacheHit(addr, set, value);
                 perfDramCacheLineRead(addr, DRAMCache[set][i].data);
                 line = i;
+                hit = true;
                 break;
             }
             else if (!DRAMCache[set][i].valid && DRAMCache[set][i].tag != addressTag) { //for compulsory miss
-                readDramCacheLine(addr, DRAMCache[set][i].data);
-                perfCacheMiss(addr, set, value, true);
-                perfDramCacheLineRead(addr, DRAMCache[set][i].data);
-                line = i;
+                hit = false;
+                compulsory = true;
             }
             else if (DRAMCache[set][i].valid && DRAMCache[set][i].tag != addressTag) { //for non-compulsory miss
-                readDramCacheLine(addr, DRAMCache[set][i].data);
-                perfCacheMiss(addr, set, value, false);
-                perfDramCacheLineRead(addr, DRAMCache[set][i].data);
-                line = i;
+                hit = false;
+                compulsory = false;
             }
         }
-        value = DRAMCache[set][line].data[(addr & 0x1f)];
-        DRAMCache[set][line].timestamp = clock++;
-        return value;  
+        if (hit == false) {
+            value = readDram(addr);
+            perfCacheMiss(addr, set, value, compulsory);
+            perfDramRead(addr, value);
+            return value;
+        }
+        else if (hit == true) {
+            value = DRAMCache[set][line].data[(addr & 0x1f)];
+            DRAMCache[set][line].timestamp = clock++;
+            return value;
+        }    
     }
     else {
         printf("Error: Address is not aligned to 4 bytes\n");
