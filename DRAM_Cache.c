@@ -40,12 +40,14 @@ int readWithCache(Address addr) {
             if (DRAMCache[set][i].valid && !DRAMCache[set][i].dirty && DRAMCache[set][i].tag == addressTag) { //for non-dirty hit
                 perfCacheHit(addr, set, value);
                 line = i;
+                break;
             } 
             else if(DRAMCache[set][i].dirty == true && DRAMCache[set][i].tag == addressTag) { //for dirty hit
                 readDramCacheLine(addr, DRAMCache[set][i].data);
                 perfCacheHit(addr, set, value);
                 perfDramCacheLineRead(addr, DRAMCache[set][i].data);
                 line = i;
+                break;
             }
             else if (!DRAMCache[set][i].valid && DRAMCache[set][i].tag != addressTag) { //for compulsory miss
                 readDramCacheLine(addr, DRAMCache[set][i].data);
