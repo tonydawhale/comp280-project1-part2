@@ -1,0 +1,526 @@
+write addr: 00004000
+	cache miss (empty) addr:00004000 set:0  entry:0
+	dram cache read addr: 00004000  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 00004000 value: 0
+write addr: 00004004
+	cache hit addr:00004004  set:0  entry:0
+	done addr: 00004004 value: 1
+write addr: 00004008
+	cache hit addr:00004008  set:0  entry:0
+	done addr: 00004008 value: 2
+write addr: 0000400c
+	cache hit addr:0000400c  set:0  entry:0
+	done addr: 0000400c value: 3
+write addr: 00004010
+	cache hit addr:00004010  set:0  entry:0
+	done addr: 00004010 value: 4
+write addr: 00004014
+	cache hit addr:00004014  set:0  entry:0
+	done addr: 00004014 value: 5
+write addr: 00004018
+	cache hit addr:00004018  set:0  entry:0
+	done addr: 00004018 value: 6
+write addr: 0000401c
+	cache hit addr:0000401c  set:0  entry:0
+	done addr: 0000401c value: 7
+write addr: 00004020
+	cache miss (empty) addr:00004020 set:1  entry:0
+	dram cache read addr: 00004020  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 00004020 value: 8
+write addr: 00004024
+	cache hit addr:00004024  set:1  entry:0
+	done addr: 00004024 value: 9
+write addr: 00004028
+	cache hit addr:00004028  set:1  entry:0
+	done addr: 00004028 value: 10
+write addr: 0000402c
+	cache hit addr:0000402c  set:1  entry:0
+	done addr: 0000402c value: 11
+write addr: 00004030
+	cache hit addr:00004030  set:1  entry:0
+	done addr: 00004030 value: 12
+write addr: 00004034
+	cache hit addr:00004034  set:1  entry:0
+	done addr: 00004034 value: 13
+write addr: 00004038
+	cache hit addr:00004038  set:1  entry:0
+	done addr: 00004038 value: 14
+write addr: 0000403c
+	cache hit addr:0000403c  set:1  entry:0
+	done addr: 0000403c value: 15
+write addr: 00004040
+	cache miss (empty) addr:00004040 set:2  entry:0
+	dram cache read addr: 00004040  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 00004040 value: 16
+write addr: 00004044
+	cache hit addr:00004044  set:2  entry:0
+	done addr: 00004044 value: 17
+write addr: 00004048
+	cache hit addr:00004048  set:2  entry:0
+	done addr: 00004048 value: 18
+write addr: 0000404c
+	cache hit addr:0000404c  set:2  entry:0
+	done addr: 0000404c value: 19
+write addr: 00004050
+	cache hit addr:00004050  set:2  entry:0
+	done addr: 00004050 value: 20
+write addr: 00004054
+	cache hit addr:00004054  set:2  entry:0
+	done addr: 00004054 value: 21
+write addr: 00004058
+	cache hit addr:00004058  set:2  entry:0
+	done addr: 00004058 value: 22
+write addr: 0000405c
+	cache hit addr:0000405c  set:2  entry:0
+	done addr: 0000405c value: 23
+write addr: 00004060
+	cache miss (empty) addr:00004060 set:3  entry:0
+	dram cache read addr: 00004060  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 00004060 value: 24
+write addr: 00004064
+	cache hit addr:00004064  set:3  entry:0
+	done addr: 00004064 value: 25
+write addr: 00004068
+	cache hit addr:00004068  set:3  entry:0
+	done addr: 00004068 value: 26
+write addr: 0000406c
+	cache hit addr:0000406c  set:3  entry:0
+	done addr: 0000406c value: 27
+write addr: 00004070
+	cache hit addr:00004070  set:3  entry:0
+	done addr: 00004070 value: 28
+write addr: 00004074
+	cache hit addr:00004074  set:3  entry:0
+	done addr: 00004074 value: 29
+write addr: 00004078
+	cache hit addr:00004078  set:3  entry:0
+	done addr: 00004078 value: 30
+write addr: 0000407c
+	cache hit addr:0000407c  set:3  entry:0
+	done addr: 0000407c value: 31
+write addr: 00004080
+	cache miss (empty) addr:00004080 set:0  entry:1
+	dram cache read addr: 00004080  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 00004080 value: 32
+write addr: 00004084
+	cache hit addr:00004084  set:0  entry:1
+	done addr: 00004084 value: 33
+write addr: 00004088
+	cache hit addr:00004088  set:0  entry:1
+	done addr: 00004088 value: 34
+write addr: 0000408c
+	cache hit addr:0000408c  set:0  entry:1
+	done addr: 0000408c value: 35
+write addr: 00004090
+	cache hit addr:00004090  set:0  entry:1
+	done addr: 00004090 value: 36
+write addr: 00004094
+	cache hit addr:00004094  set:0  entry:1
+	done addr: 00004094 value: 37
+write addr: 00004098
+	cache hit addr:00004098  set:0  entry:1
+	done addr: 00004098 value: 38
+write addr: 0000409c
+	cache hit addr:0000409c  set:0  entry:1
+	done addr: 0000409c value: 39
+write addr: 000040a0
+	cache miss (empty) addr:000040a0 set:1  entry:1
+	dram cache read addr: 000040a0  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 000040a0 value: 40
+write addr: 000040a4
+	cache hit addr:000040a4  set:1  entry:1
+	done addr: 000040a4 value: 41
+write addr: 000040a8
+	cache hit addr:000040a8  set:1  entry:1
+	done addr: 000040a8 value: 42
+write addr: 000040ac
+	cache hit addr:000040ac  set:1  entry:1
+	done addr: 000040ac value: 43
+write addr: 000040b0
+	cache hit addr:000040b0  set:1  entry:1
+	done addr: 000040b0 value: 44
+write addr: 000040b4
+	cache hit addr:000040b4  set:1  entry:1
+	done addr: 000040b4 value: 45
+write addr: 000040b8
+	cache hit addr:000040b8  set:1  entry:1
+	done addr: 000040b8 value: 46
+write addr: 000040bc
+	cache hit addr:000040bc  set:1  entry:1
+	done addr: 000040bc value: 47
+write addr: 000040c0
+	cache miss (empty) addr:000040c0 set:2  entry:1
+	dram cache read addr: 000040c0  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 000040c0 value: 48
+write addr: 000040c4
+	cache hit addr:000040c4  set:2  entry:1
+	done addr: 000040c4 value: 49
+write addr: 000040c8
+	cache hit addr:000040c8  set:2  entry:1
+	done addr: 000040c8 value: 50
+write addr: 000040cc
+	cache hit addr:000040cc  set:2  entry:1
+	done addr: 000040cc value: 51
+write addr: 000040d0
+	cache hit addr:000040d0  set:2  entry:1
+	done addr: 000040d0 value: 52
+write addr: 000040d4
+	cache hit addr:000040d4  set:2  entry:1
+	done addr: 000040d4 value: 53
+write addr: 000040d8
+	cache hit addr:000040d8  set:2  entry:1
+	done addr: 000040d8 value: 54
+write addr: 000040dc
+	cache hit addr:000040dc  set:2  entry:1
+	done addr: 000040dc value: 55
+write addr: 000040e0
+	cache miss (empty) addr:000040e0 set:3  entry:1
+	dram cache read addr: 000040e0  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 000040e0 value: 56
+write addr: 000040e4
+	cache hit addr:000040e4  set:3  entry:1
+	done addr: 000040e4 value: 57
+write addr: 000040e8
+	cache hit addr:000040e8  set:3  entry:1
+	done addr: 000040e8 value: 58
+write addr: 000040ec
+	cache hit addr:000040ec  set:3  entry:1
+	done addr: 000040ec value: 59
+write addr: 000040f0
+	cache hit addr:000040f0  set:3  entry:1
+	done addr: 000040f0 value: 60
+write addr: 000040f4
+	cache hit addr:000040f4  set:3  entry:1
+	done addr: 000040f4 value: 61
+write addr: 000040f8
+	cache hit addr:000040f8  set:3  entry:1
+	done addr: 000040f8 value: 62
+write addr: 000040fc
+	cache hit addr:000040fc  set:3  entry:1
+	done addr: 000040fc value: 63
+write addr: 00004100
+	dram cache write addr: 00004000  value: 00000000 01000000 02000000 03000000 04000000 05000000 06000000 07000000
+	cache miss  addr:00004100 set:0  entry:0
+	dram cache read addr: 00004100  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 00004100 value: 64
+write addr: 00004104
+	cache hit addr:00004104  set:0  entry:0
+	done addr: 00004104 value: 65
+write addr: 00004108
+	cache hit addr:00004108  set:0  entry:0
+	done addr: 00004108 value: 66
+write addr: 0000410c
+	cache hit addr:0000410c  set:0  entry:0
+	done addr: 0000410c value: 67
+write addr: 00004110
+	cache hit addr:00004110  set:0  entry:0
+	done addr: 00004110 value: 68
+write addr: 00004114
+	cache hit addr:00004114  set:0  entry:0
+	done addr: 00004114 value: 69
+write addr: 00004118
+	cache hit addr:00004118  set:0  entry:0
+	done addr: 00004118 value: 70
+write addr: 0000411c
+	cache hit addr:0000411c  set:0  entry:0
+	done addr: 0000411c value: 71
+write addr: 00004120
+	dram cache write addr: 00004020  value: 08000000 09000000 0a000000 0b000000 0c000000 0d000000 0e000000 0f000000
+	cache miss  addr:00004120 set:1  entry:0
+	dram cache read addr: 00004120  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 00004120 value: 72
+write addr: 00004124
+	cache hit addr:00004124  set:1  entry:0
+	done addr: 00004124 value: 73
+write addr: 00004128
+	cache hit addr:00004128  set:1  entry:0
+	done addr: 00004128 value: 74
+write addr: 0000412c
+	cache hit addr:0000412c  set:1  entry:0
+	done addr: 0000412c value: 75
+write addr: 00004130
+	cache hit addr:00004130  set:1  entry:0
+	done addr: 00004130 value: 76
+write addr: 00004134
+	cache hit addr:00004134  set:1  entry:0
+	done addr: 00004134 value: 77
+write addr: 00004138
+	cache hit addr:00004138  set:1  entry:0
+	done addr: 00004138 value: 78
+write addr: 0000413c
+	cache hit addr:0000413c  set:1  entry:0
+	done addr: 0000413c value: 79
+write addr: 00004140
+	dram cache write addr: 00004040  value: 10000000 11000000 12000000 13000000 14000000 15000000 16000000 17000000
+	cache miss  addr:00004140 set:2  entry:0
+	dram cache read addr: 00004140  value: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 00004140 value: 80
+read addr: 00004000
+	dram cache write addr: 00004080  value: 20000000 21000000 22000000 23000000 24000000 25000000 26000000 27000000
+	cache miss  addr:00004000 set:0  entry:1
+	dram cache read addr: 00004000  value: 00000000 01000000 02000000 03000000 04000000 05000000 06000000 07000000
+	done addr: 00004000 value: 0
+read addr: 00004004
+	cache hit addr:00004004  set:0  entry:1
+	done addr: 00004004 value: 1
+read addr: 00004008
+	cache hit addr:00004008  set:0  entry:1
+	done addr: 00004008 value: 2
+read addr: 0000400c
+	cache hit addr:0000400c  set:0  entry:1
+	done addr: 0000400c value: 3
+read addr: 00004010
+	cache hit addr:00004010  set:0  entry:1
+	done addr: 00004010 value: 4
+read addr: 00004014
+	cache hit addr:00004014  set:0  entry:1
+	done addr: 00004014 value: 5
+read addr: 00004018
+	cache hit addr:00004018  set:0  entry:1
+	done addr: 00004018 value: 6
+read addr: 0000401c
+	cache hit addr:0000401c  set:0  entry:1
+	done addr: 0000401c value: 7
+read addr: 00004020
+	dram cache write addr: 000040a0  value: 28000000 29000000 2a000000 2b000000 2c000000 2d000000 2e000000 2f000000
+	cache miss  addr:00004020 set:1  entry:1
+	dram cache read addr: 00004020  value: 08000000 09000000 0a000000 0b000000 0c000000 0d000000 0e000000 0f000000
+	done addr: 00004020 value: 8
+read addr: 00004024
+	cache hit addr:00004024  set:1  entry:1
+	done addr: 00004024 value: 9
+read addr: 00004028
+	cache hit addr:00004028  set:1  entry:1
+	done addr: 00004028 value: 10
+read addr: 0000402c
+	cache hit addr:0000402c  set:1  entry:1
+	done addr: 0000402c value: 11
+read addr: 00004030
+	cache hit addr:00004030  set:1  entry:1
+	done addr: 00004030 value: 12
+read addr: 00004034
+	cache hit addr:00004034  set:1  entry:1
+	done addr: 00004034 value: 13
+read addr: 00004038
+	cache hit addr:00004038  set:1  entry:1
+	done addr: 00004038 value: 14
+read addr: 0000403c
+	cache hit addr:0000403c  set:1  entry:1
+	done addr: 0000403c value: 15
+read addr: 00004040
+	dram cache write addr: 000040c0  value: 30000000 31000000 32000000 33000000 34000000 35000000 36000000 37000000
+	cache miss  addr:00004040 set:2  entry:1
+	dram cache read addr: 00004040  value: 10000000 11000000 12000000 13000000 14000000 15000000 16000000 17000000
+	done addr: 00004040 value: 16
+read addr: 00004044
+	cache hit addr:00004044  set:2  entry:1
+	done addr: 00004044 value: 17
+read addr: 00004048
+	cache hit addr:00004048  set:2  entry:1
+	done addr: 00004048 value: 18
+read addr: 0000404c
+	cache hit addr:0000404c  set:2  entry:1
+	done addr: 0000404c value: 19
+read addr: 00004050
+	cache hit addr:00004050  set:2  entry:1
+	done addr: 00004050 value: 20
+read addr: 00004054
+	cache hit addr:00004054  set:2  entry:1
+	done addr: 00004054 value: 21
+read addr: 00004058
+	cache hit addr:00004058  set:2  entry:1
+	done addr: 00004058 value: 22
+read addr: 0000405c
+	cache hit addr:0000405c  set:2  entry:1
+	done addr: 0000405c value: 23
+read addr: 00004060
+	cache hit addr:00004060  set:3  entry:0
+	done addr: 00004060 value: 24
+read addr: 00004064
+	cache hit addr:00004064  set:3  entry:0
+	done addr: 00004064 value: 25
+read addr: 00004068
+	cache hit addr:00004068  set:3  entry:0
+	done addr: 00004068 value: 26
+read addr: 0000406c
+	cache hit addr:0000406c  set:3  entry:0
+	done addr: 0000406c value: 27
+read addr: 00004070
+	cache hit addr:00004070  set:3  entry:0
+	done addr: 00004070 value: 28
+read addr: 00004074
+	cache hit addr:00004074  set:3  entry:0
+	done addr: 00004074 value: 29
+read addr: 00004078
+	cache hit addr:00004078  set:3  entry:0
+	done addr: 00004078 value: 30
+read addr: 0000407c
+	cache hit addr:0000407c  set:3  entry:0
+	done addr: 0000407c value: 31
+read addr: 00004080
+	dram cache write addr: 00004100  value: 40000000 41000000 42000000 43000000 44000000 45000000 46000000 47000000
+	cache miss  addr:00004080 set:0  entry:0
+	dram cache read addr: 00004080  value: 20000000 21000000 22000000 23000000 24000000 25000000 26000000 27000000
+	done addr: 00004080 value: 32
+read addr: 00004084
+	cache hit addr:00004084  set:0  entry:0
+	done addr: 00004084 value: 33
+read addr: 00004088
+	cache hit addr:00004088  set:0  entry:0
+	done addr: 00004088 value: 34
+read addr: 0000408c
+	cache hit addr:0000408c  set:0  entry:0
+	done addr: 0000408c value: 35
+read addr: 00004090
+	cache hit addr:00004090  set:0  entry:0
+	done addr: 00004090 value: 36
+read addr: 00004094
+	cache hit addr:00004094  set:0  entry:0
+	done addr: 00004094 value: 37
+read addr: 00004098
+	cache hit addr:00004098  set:0  entry:0
+	done addr: 00004098 value: 38
+read addr: 0000409c
+	cache hit addr:0000409c  set:0  entry:0
+	done addr: 0000409c value: 39
+read addr: 000040a0
+	dram cache write addr: 00004120  value: 48000000 49000000 4a000000 4b000000 4c000000 4d000000 4e000000 4f000000
+	cache miss  addr:000040a0 set:1  entry:0
+	dram cache read addr: 000040a0  value: 28000000 29000000 2a000000 2b000000 2c000000 2d000000 2e000000 2f000000
+	done addr: 000040a0 value: 40
+read addr: 000040a4
+	cache hit addr:000040a4  set:1  entry:0
+	done addr: 000040a4 value: 41
+read addr: 000040a8
+	cache hit addr:000040a8  set:1  entry:0
+	done addr: 000040a8 value: 42
+read addr: 000040ac
+	cache hit addr:000040ac  set:1  entry:0
+	done addr: 000040ac value: 43
+read addr: 000040b0
+	cache hit addr:000040b0  set:1  entry:0
+	done addr: 000040b0 value: 44
+read addr: 000040b4
+	cache hit addr:000040b4  set:1  entry:0
+	done addr: 000040b4 value: 45
+read addr: 000040b8
+	cache hit addr:000040b8  set:1  entry:0
+	done addr: 000040b8 value: 46
+read addr: 000040bc
+	cache hit addr:000040bc  set:1  entry:0
+	done addr: 000040bc value: 47
+read addr: 000040c0
+	dram cache write addr: 00004140  value: 50000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	cache miss  addr:000040c0 set:2  entry:0
+	dram cache read addr: 000040c0  value: 30000000 31000000 32000000 33000000 34000000 35000000 36000000 37000000
+	done addr: 000040c0 value: 48
+read addr: 000040c4
+	cache hit addr:000040c4  set:2  entry:0
+	done addr: 000040c4 value: 49
+read addr: 000040c8
+	cache hit addr:000040c8  set:2  entry:0
+	done addr: 000040c8 value: 50
+read addr: 000040cc
+	cache hit addr:000040cc  set:2  entry:0
+	done addr: 000040cc value: 51
+read addr: 000040d0
+	cache hit addr:000040d0  set:2  entry:0
+	done addr: 000040d0 value: 52
+read addr: 000040d4
+	cache hit addr:000040d4  set:2  entry:0
+	done addr: 000040d4 value: 53
+read addr: 000040d8
+	cache hit addr:000040d8  set:2  entry:0
+	done addr: 000040d8 value: 54
+read addr: 000040dc
+	cache hit addr:000040dc  set:2  entry:0
+	done addr: 000040dc value: 55
+read addr: 000040e0
+	cache hit addr:000040e0  set:3  entry:1
+	done addr: 000040e0 value: 56
+read addr: 000040e4
+	cache hit addr:000040e4  set:3  entry:1
+	done addr: 000040e4 value: 57
+read addr: 000040e8
+	cache hit addr:000040e8  set:3  entry:1
+	done addr: 000040e8 value: 58
+read addr: 000040ec
+	cache hit addr:000040ec  set:3  entry:1
+	done addr: 000040ec value: 59
+read addr: 000040f0
+	cache hit addr:000040f0  set:3  entry:1
+	done addr: 000040f0 value: 60
+read addr: 000040f4
+	cache hit addr:000040f4  set:3  entry:1
+	done addr: 000040f4 value: 61
+read addr: 000040f8
+	cache hit addr:000040f8  set:3  entry:1
+	done addr: 000040f8 value: 62
+read addr: 000040fc
+	cache hit addr:000040fc  set:3  entry:1
+	done addr: 000040fc value: 63
+read addr: 00004100
+	cache miss  addr:00004100 set:0  entry:1
+	dram cache read addr: 00004100  value: 40000000 41000000 42000000 43000000 44000000 45000000 46000000 47000000
+	done addr: 00004100 value: 64
+read addr: 00004104
+	cache hit addr:00004104  set:0  entry:1
+	done addr: 00004104 value: 65
+read addr: 00004108
+	cache hit addr:00004108  set:0  entry:1
+	done addr: 00004108 value: 66
+read addr: 0000410c
+	cache hit addr:0000410c  set:0  entry:1
+	done addr: 0000410c value: 67
+read addr: 00004110
+	cache hit addr:00004110  set:0  entry:1
+	done addr: 00004110 value: 68
+read addr: 00004114
+	cache hit addr:00004114  set:0  entry:1
+	done addr: 00004114 value: 69
+read addr: 00004118
+	cache hit addr:00004118  set:0  entry:1
+	done addr: 00004118 value: 70
+read addr: 0000411c
+	cache hit addr:0000411c  set:0  entry:1
+	done addr: 0000411c value: 71
+read addr: 00004120
+	cache miss  addr:00004120 set:1  entry:1
+	dram cache read addr: 00004120  value: 48000000 49000000 4a000000 4b000000 4c000000 4d000000 4e000000 4f000000
+	done addr: 00004120 value: 72
+read addr: 00004124
+	cache hit addr:00004124  set:1  entry:1
+	done addr: 00004124 value: 73
+read addr: 00004128
+	cache hit addr:00004128  set:1  entry:1
+	done addr: 00004128 value: 74
+read addr: 0000412c
+	cache hit addr:0000412c  set:1  entry:1
+	done addr: 0000412c value: 75
+read addr: 00004130
+	cache hit addr:00004130  set:1  entry:1
+	done addr: 00004130 value: 76
+read addr: 00004134
+	cache hit addr:00004134  set:1  entry:1
+	done addr: 00004134 value: 77
+read addr: 00004138
+	cache hit addr:00004138  set:1  entry:1
+	done addr: 00004138 value: 78
+read addr: 0000413c
+	cache hit addr:0000413c  set:1  entry:1
+	done addr: 0000413c value: 79
+read addr: 00004140
+	cache miss  addr:00004140 set:2  entry:1
+	dram cache read addr: 00004140  value: 50000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+	done addr: 00004140 value: 80
+flush
+	dram cache write addr: 00004060  value: 18000000 19000000 1a000000 1b000000 1c000000 1d000000 1e000000 1f000000
+	dram cache write addr: 000040e0  value: 38000000 39000000 3a000000 3b000000 3c000000 3d000000 3e000000 3f000000
+Performance
+cost: 1116
+DRAM reads: 0
+DRAM writes: 0
+cache line reads: 20
+cache line writes: 11
+cache hits: 142
+cache misses: 20
