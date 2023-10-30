@@ -99,8 +99,7 @@ void writeWithCache(Address addr, int value) {
             DRAMCache[set][line].timestamp = clock++;
             perfCacheHit(addr, set, value);
         } else {
-            int oldest = DRAMCache[set][1].timestamp < DRAMCache[set][0].timestamp ? 1 : 0;
-            line = oldest;
+            line = DRAMCache[set][1].timestamp < DRAMCache[set][0].timestamp ? 1 : 0;
             DRAMCache[set][line].data[(addr & 0x1f)] &= 0x00000000; // clears 4 bytes where we want to store value(4 bytes)
             DRAMCache[set][line].data[(addr & 0x1f)] |= value; // stores value into CacheLine data
             DRAMCache[set][line].valid = true;
@@ -114,6 +113,13 @@ void writeWithCache(Address addr, int value) {
     }
 }
 void flushCache() {
-    
+    for (int i = 0; i < NUM_SETS; i++) {
+        for (int j = 0; j < NUM_LINES; j++) {
+            if (DRAMCache[i][j].dirty) {
+                writeDramCacheLine(i, DRAMCache[i][j].data);
+                perfDramCacheLineWrite(i, DRAMCache[i][j].data);
+            }
+        }
+    }
     perfCacheFlush();
 }
