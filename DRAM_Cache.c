@@ -39,36 +39,28 @@ int readWithCache(Address addr) {
         bool hit = false;
         bool compulsory = false;
         for (int i = 0; i < NUM_LINES; i++) {
-            if (DRAMCache[set][i].valid && !DRAMCache[set][i].dirty && DRAMCache[set][i].tag == addressTag) { //for non-dirty hit
-                perfCacheHit(addr, set, value);
+            if (DRAMCache[set][i].valid && !DRAMCache[set][i].dirty && DRAMCache[set][i].tag == addressTag) { // for non-dirty hit
                 line = i;
                 hit = true;
+                perfCacheHit(addr, set, value);
                 break;
-            } 
-            else if(DRAMCache[set][i].dirty == true && DRAMCache[set][i].tag == addressTag) { //for dirty hit
+            } else if (DRAMCache[set][i].dirty == true && DRAMCache[set][i].tag == addressTag) { // for dirty hit
                 readDramCacheLine(addr, DRAMCache[set][i].data);
+                line = i;
+                hit = true;
                 perfCacheHit(addr, set, value);
                 perfDramCacheLineRead(addr, DRAMCache[set][i].data);
-                line = i;
-                hit = true;
                 break;
-            }
-            else if (!DRAMCache[set][i].valid && DRAMCache[set][i].tag != addressTag) { //for compulsory miss
-                hit = false;
+            } else if (!DRAMCache[set][i].valid && DRAMCache[set][i].tag != addressTag) { // for compulsory miss
                 compulsory = true;
-            }
-            else if (DRAMCache[set][i].valid && DRAMCache[set][i].tag != addressTag) { //for non-compulsory miss
-                hit = false;
-                compulsory = false;
-            }
+            } // otherwise it will be a non-compulsory miss
         }
-        if (hit == false) {
+        if (!hit) {
             value = readDram(addr);
             perfCacheMiss(addr, set, value, compulsory);
             perfDramRead(addr, value);
             return value;
-        }
-        else if (hit == true) {
+        } else {
             value = DRAMCache[set][line].data[(addr & 0x1f)];
             DRAMCache[set][line].timestamp = clock++;
             return value;
@@ -84,23 +76,37 @@ void writeWithCache(Address addr, int value) {
         int set = (addr >> 5) & 0x3;
         int addressTag = (addr >> 7) & 0x1ff;
         int line;
+        bool hit = false;
+        bool compulsory = false;
         for (int i = 0; i < NUM_LINES; i++) {
             if (DRAMCache[set][i].tag == addressTag) { //for hit(tag matches)
-                DRAMCache[set][line].data[(addr & 0x1f)] &= 0x00000000; // clears 4 bytes where we want to store value(4 bytes)
-                DRAMCache[set][line].data[(addr & 0x1f)] |= value; // stores value into CacheLine data
-                DRAMCache[set][line].valid = true;
-                DRAMCache[set][line].dirty = true;
-                DRAMCache[set][line].timestamp = clock++; 
-                perfCacheHit(addr, set, value);
+                hit = true;
+                line = i;
+                break;
             }
-            else if (DRAMCache[set][i].tag != addressTag) { //for miss
-                if (DRAMCache[set]) {
-                    
-                }
-
+            else if (!DRAMCache[set][i].valid && DRAMCache[set][i].tag != addressTag) { // for compulsory miss
+                compulsory = true;
             }
-
-            
+            else if (DRAMCache[set][i].valid && DRAMCache[set][i].tag != addressTag) { //for non-compulsory miss
+                compulsory = false;
+            } 
+        }
+        if (hit){
+            DRAMCache[set][line].data[(addr & 0x1f)] &= 0x00000000; // clears 4 bytes where we want to store value(4 bytes)
+            DRAMCache[set][line].data[(addr & 0x1f)] |= value; // stores value into CacheLine data
+            DRAMCache[set][line].valid = true;
+            DRAMCache[set][line].dirty = true;
+            DRAMCache[set][line].timestamp = clock++;
+            perfCacheHit(addr, set, value);
+        } else {
+            int oldest = DRAMCache[set][1].timestamp < DRAMCache[set][0].timestamp ? 1 : 0;
+            line = oldest;
+            DRAMCache[set][line].data[(addr & 0x1f)] &= 0x00000000; // clears 4 bytes where we want to store value(4 bytes)
+            DRAMCache[set][line].data[(addr & 0x1f)] |= value; // stores value into CacheLine data
+            DRAMCache[set][line].valid = true;
+            DRAMCache[set][line].dirty = true;
+            DRAMCache[set][line].timestamp = clock++;
+            perfCacheMiss(addr, set, value, compulsory);
         }
     }
     else {
