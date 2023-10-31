@@ -55,7 +55,7 @@ int readWithCache(Address addr) {
             }
         }
         if (hit) {
-            memcpy(&value, &DRAMCache[set][line].data, 4);
+            memcpy(&value, &DRAMCache[set][line].data[addr & 0x1f], 4);
             DRAMCache[set][line].timestamp = clock++;
             perfCacheHit(addr, set, line);
             return value;
@@ -82,7 +82,7 @@ int readWithCache(Address addr) {
             DRAMCache[set][line].valid = true;
             DRAMCache[set][line].dirty = false;
             DRAMCache[set][line].timestamp = clock++;
-            memcpy(&value, &DRAMCache[set][line].data, 4);
+            memcpy(&value, &DRAMCache[set][line].data[addr & 0x1f], 4);
             perfCacheMiss(addr, set, line, compulsory);
             return value;
         }
@@ -107,7 +107,7 @@ void writeWithCache(Address addr, int value) {
             }
         }
         if (hit) { // If there is a hit
-            memcpy(&DRAMCache[set][line].data, &value, 4);
+            memcpy(&DRAMCache[set][line].data[addr & 0x1f], &value, 4);
             DRAMCache[set][line].tag = addressTag;
             DRAMCache[set][line].dirty = true;
             DRAMCache[set][line].timestamp = clock++;
@@ -130,7 +130,7 @@ void writeWithCache(Address addr, int value) {
                 }
             }
             readDramCacheLine(addr & ~0x1f, DRAMCache[set][line].data);
-            memcpy(&DRAMCache[set][line].data, &value, 4);
+            memcpy(&DRAMCache[set][line].data[addr & 0x1f], &value, 4);
             DRAMCache[set][line].tag = addressTag;
             DRAMCache[set][line].dirty = true;
             DRAMCache[set][line].valid = true;
